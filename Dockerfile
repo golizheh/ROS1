@@ -1,6 +1,6 @@
 FROM duckietown/rpi-ros-kinetic-roscore:master18
 
-LABEL maintainer="Aleksandar Petrov alpetrov@student.ethz.ch"
+LABEL maintainer="Golizheh Mehrooz golizheh_66@yahoo.com"
 
 # REQUIRED ENVIRONMENT VARIABLES THAT HAVE TO BE PASSED WHEN RUNNING THE CONTAINER:
 # ROS_MASTER_URI - the hostname and port of the roscore master, typically http://hostname:11311 - ALWAYS REQUIRED! 
