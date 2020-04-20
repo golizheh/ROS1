@@ -1,4 +1,4 @@
-FROM duckietown/rpi-ros-kinetic-roscore:master18
+FROM osrf/ros:kinetic-desktop-full
 
 LABEL maintainer="Golizheh Mehrooz golizheh_66@yahoo.com"
 
