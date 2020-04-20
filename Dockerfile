@@ -7,7 +7,7 @@ LABEL maintainer="Golizheh Mehrooz golizheh_66@yahoo.com"
 # DUCKIEBOT_NAME - the hostname of the Duckiebot, e.g. duckiebot
 
 
-RUN [ "cross-build-start" ]
+
 
 RUN mkdir /node-ws 
 
@@ -22,7 +22,7 @@ RUN /bin/bash -c "cd /node-ws && source /opt/ros/kinetic/setup.bash && catkin_ma
 
 RUN /bin/bash -c "source /node-ws/devel/setup.bash"
 
-RUN [ "cross-build-end" ]
+
 
 WORKDIR /node-ws
 
