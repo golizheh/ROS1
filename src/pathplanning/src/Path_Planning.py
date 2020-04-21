@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import String
-import requests
+#import requests
 
 class locations:
   def __init__(self, lat,lon):
@@ -45,5 +45,5 @@ def Path_planning():
 
 if __name__ == '__main__':
     print("Hello from python")
-    Path_planning()
+    #Path_planning()
 
