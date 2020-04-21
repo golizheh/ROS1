@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import String
-import requests
+#import requests
 
 class locations:
   def __init__(self, lat,lon):
