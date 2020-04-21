@@ -11,7 +11,7 @@
 #RUN pip install requests
 
 
-FROM python:3.8
+FROM python:2
 RUN pip install requests
 
 
