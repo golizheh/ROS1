@@ -1,5 +1,5 @@
-FROM python:2.7
-RUN pip install -U requests
+FROM python
+RUN pip install requests
 
 
 #FROM duckietown/rpi-ros-kinetic-base:master18
