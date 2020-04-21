@@ -52,8 +52,8 @@ ENV ROS_HOSTNAME localhost
 
 RUN /bin/bash -c "cd /node-ws && source /opt/ros/kinetic/setup.bash && catkin_make -C /node-ws"
 
-FROM python:2
-RUN pip install requests
+#FROM python:2
+#RUN pip install requests
 
 RUN /bin/bash -c "source /node-ws/devel/setup.bash"
 
