@@ -26,6 +26,7 @@ RUN /bin/bash -c "cd /node-ws && source /opt/ros/kinetic/setup.bash && catkin_ma
 RUN /bin/bash -c "source /node-ws/devel/setup.bash"
 
 
+EXPOSE 5000
 
 WORKDIR /node-ws
 
