@@ -1,3 +1,6 @@
+FROM python:3.8
+RUN pip install requests
+
 FROM osrf/ros:kinetic-desktop-full
 
 LABEL maintainer="Golizheh Mehrooz golizheh_66@yahoo.com"
