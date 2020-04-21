@@ -1,14 +1,14 @@
-FROM ubuntu:16.04
+#FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    python \
-    python-pip \
-    && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+#RUN apt-get update && apt-get install -y --no-install-recommends \
+    #python \
+    #python-pip \
+    #&& \
+    #apt-get clean && \
+    #rm -rf /var/lib/apt/lists/*
 
 #RUN pip3 install nibabel pydicom matplotlib pillow
-RUN pip install requests
+#RUN pip install requests
 
 
 #FROM python
@@ -16,6 +16,20 @@ RUN pip install requests
 
 
 #FROM duckietown/rpi-ros-kinetic-base:master18
+
+FROM python:2
+
+WORKDIR /usr/src/app
+
+#COPY requirements.txt ./
+
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir  requests
+
+#COPY . .
+
+
+
 FROM osrf/ros:kinetic-desktop-full
 
 LABEL maintainer="Golizheh Mehrooz golizheh_66@yahoo.com"
@@ -39,7 +53,6 @@ ENV ROS_HOSTNAME localhost
 RUN /bin/bash -c "cd /node-ws && source /opt/ros/kinetic/setup.bash && catkin_make -C /node-ws"
 
 RUN /bin/bash -c "source /node-ws/devel/setup.bash"
-
 
 
 WORKDIR /node-ws
