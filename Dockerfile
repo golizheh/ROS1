@@ -1,14 +1,14 @@
 FROM python:3.8
 RUN pip install requests
 
-FROM duckietown/rpi-ros-kinetic-base:master18
-#FROM osrf/ros:kinetic-desktop-full
+#FROM duckietown/rpi-ros-kinetic-base:master18
+FROM osrf/ros:kinetic-desktop-full
 
 LABEL maintainer="Golizheh Mehrooz golizheh_66@yahoo.com"
 
 # REQUIRED ENVIRONMENT VARIABLES THAT HAVE TO BE PASSED WHEN RUNNING THE CONTAINER:
-ROS_MASTER_URI - http://hostname:11311  
-DUCKIEBOT_NAME - duckiebot
+ENV ROS_MASTER_URI - http://hostname:11311  
+ENV DUCKIEBOT_NAME - duckiebot
 
 
 
