@@ -1,7 +1,8 @@
 FROM python:3.8
 RUN pip install requests
 
-FROM osrf/ros:kinetic-desktop-full
+FROM duckietown/rpi-ros-kinetic-base:master18
+#FROM osrf/ros:kinetic-desktop-full
 
 LABEL maintainer="Golizheh Mehrooz golizheh_66@yahoo.com"
 
