@@ -1,5 +1,6 @@
-FROM python:3.8
-RUN pip install requests
+FROM python:2.7
+RUN pip install -U requests
+
 
 #FROM duckietown/rpi-ros-kinetic-base:master18
 FROM osrf/ros:kinetic-desktop-full
