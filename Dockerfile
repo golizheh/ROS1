@@ -7,7 +7,7 @@ FROM osrf/ros:kinetic-desktop-full
 LABEL maintainer="Golizheh Mehrooz golizheh_66@yahoo.com"
 
 # REQUIRED ENVIRONMENT VARIABLES THAT HAVE TO BE PASSED WHEN RUNNING THE CONTAINER:
-ENV ROS_MASTER_URI - http://hostname:11311  
+ENV ROS_MASTER_URI - http://localhost:11311  
 ENV DUCKIEBOT_NAME - duckiebot
 
 
