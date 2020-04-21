@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import String
-#import requests
+import requests
 
 class locations:
   def __init__(self, lat,lon):
@@ -39,7 +39,7 @@ def Path_planning():
     
     rospy.init_node('Path_planning', anonymous=True)
     print("Hello after ROS py...")
-    #rospy.Subscriber("string_url", String, callback)
+    rospy.Subscriber("string_url", String, callback)
 
     
     rospy.spin()
