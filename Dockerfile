@@ -11,19 +11,19 @@
 #RUN pip install requests
 
 
-#FROM python
-#RUN pip install requests
+FROM python:3.8
+RUN pip install requests
 
 
 #FROM duckietown/rpi-ros-kinetic-base:master18
 
-FROM python:2
+#FROM python:2
 
-WORKDIR /usr/src/app
+#WORKDIR /usr/src/app
 
 #COPY requirements.txt ./
 
-RUN pip install --upgrade pip && \
+#RUN pip install --upgrade pip && \
     pip install --no-cache-dir  requests
 
 #COPY . .
