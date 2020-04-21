@@ -1,5 +1,18 @@
-FROM python
+FROM ubuntu:16.04
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python \
+    python-pip \
+    && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+#RUN pip3 install nibabel pydicom matplotlib pillow
 RUN pip install requests
+
+
+#FROM python
+#RUN pip install requests
 
 
 #FROM duckietown/rpi-ros-kinetic-base:master18
