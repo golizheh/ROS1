@@ -10,8 +10,8 @@
 #RUN pip3 install nibabel pydicom matplotlib pillow
 #RUN pip install requests
 
-
-
+FROM python:2
+RUN  python -m pip install requests
 
 
 
