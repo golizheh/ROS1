@@ -44,5 +44,6 @@ def Path_planning():
     rospy.spin()
 
 if __name__ == '__main__':
+    print("Hello from python")
     Path_planning()
 
