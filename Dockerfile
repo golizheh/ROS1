@@ -52,11 +52,11 @@ ENV ROS_HOSTNAME localhost
 
 RUN /bin/bash -c "cd /node-ws && source /opt/ros/kinetic/setup.bash && catkin_make -C /node-ws"
 
-#FROM python:2
+RUN apt-get install ros-kinetic-rosbridge-server \
 RUN easy_install pip && pip install requests
 
 RUN /bin/bash -c "source /node-ws/devel/setup.bash"
-
+EXPOSE 9090
 
 WORKDIR /node-ws
 
