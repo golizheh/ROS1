@@ -58,7 +58,7 @@ RUN pip install requests
 RUN python -m pip install tornado
 RUN pip install pymongo
 #RUN easy_install pip && pip install requests
-# For EOSBRIDGE, It is not needed FOR THIS Packages
+# For ROSBRIDGE, It is not needed FOR THIS Packages
 #RUN apt-get update && apt-get install -y ros-melodic-rosbridge-suite 
 #RUN easy_install pip && pip install requests
 
