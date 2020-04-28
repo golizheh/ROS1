@@ -36,16 +36,16 @@ def callback(data):
     
 def Path_planning():
 
-    print("inside the code")
+    #print("inside the code")
     
     rospy.init_node('Path_planning', anonymous=True)
-    print("Hello after ROS py...")
+    #print("Hello after ROS py...")
     rospy.Subscriber("string_url", String, callback)
 
     
     rospy.spin()
 
 if __name__ == '__main__':
-    print("Hello from python")
+    #print("Hello from python")
     Path_planning()
 
