@@ -30,7 +30,7 @@
 
 
 
-FROM osrf/ros:kinetic-desktop-full
+FROM osrf/ros:melodic-desktop-full
 
 LABEL maintainer="Golizheh Mehrooz golizheh_66@yahoo.com"
 
@@ -52,7 +52,7 @@ ENV ROS_HOSTNAME localhost
 
 RUN /bin/bash -c "cd /node-ws && source /opt/ros/kinetic/setup.bash && catkin_make -C /node-ws"
 
-RUN apt-get install ros-kinetic-rosbridge-server \
+RUN apt-get install ros-melodic-rosbridge-server 
 RUN easy_install pip && pip install requests
 
 RUN /bin/bash -c "source /node-ws/devel/setup.bash"
