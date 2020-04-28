@@ -50,13 +50,20 @@ COPY node_launch.sh /node-ws
 
 ENV ROS_HOSTNAME localhost
 
-RUN /bin/bash -c "cd /node-ws && source /opt/ros/kinetic/setup.bash && catkin_make -C /node-ws"
+RUN /bin/bash -c "cd /node-ws && source /opt/ros/melodic/setup.bash && catkin_make -C /node-ws"
+RUN python --version
+RUN sudo apt-get update && sudo apt-get -y  install python-pip
 
-RUN apt-get install ros-melodic-rosbridge-server 
-RUN easy_install pip && pip install requests
+RUN pip install requests
+RUN python -m pip install tornado
+RUN pip install pymongo
+#RUN easy_install pip && pip install requests
+# For EOSBRIDGE, It is not needed FOR THIS Packages
+#RUN apt-get update && apt-get install -y ros-melodic-rosbridge-suite 
+#RUN easy_install pip && pip install requests
 
 RUN /bin/bash -c "source /node-ws/devel/setup.bash"
-EXPOSE 9090
+#EXPOSE 9090
 
 WORKDIR /node-ws
 
