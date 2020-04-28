@@ -18,6 +18,8 @@ sudo docker run -it --network host -e ROS_MASTER_URI='http://localhost:11311' -e
 
 
 sudo docker run -it --network host -e ROS_MASTER_URI='http://localhost:11311' -e DUCKIEBOT_NAME='duckiebot' golizheh/rosbridge
+
 sudo docker run -it --network host -e ROS_MASTER_URI='http://localhost:11311' -e DUCKIEBOT_NAME='duckiebot' golizheh/rosnode:path
+
 sudo docker run -it --network host -e ROS_MASTER_URI='http://localhost:11311' -e DUCKIEBOT_NAME='duckiebot' golizheh/roscore
 
