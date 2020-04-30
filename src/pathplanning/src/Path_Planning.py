@@ -37,10 +37,18 @@ def callback(data):
 def Path_planning():
 
     #print("inside the code")
+    pub = rospy.Publisher('chatter', String, queue_size=10)
+    rospy.init_node('talker', anonymous=True)
+    rate = rospy.Rate(10) # 10hz
+        while not rospy.is_shutdown():
+        hello_str = "hello world %s" % rospy.get_time()
+        rospy.loginfo(hello_str)
+        pub.publish(hello_str)
+        rate.sleep()
     
-    rospy.init_node('Path_planning', anonymous=True)
+    #rospy.init_node('Path_planning', anonymous=True)
     #print("Hello after ROS py...")
-    rospy.Subscriber("string_url", String, callback)
+    #rospy.Subscriber("string_url", String, callback)
 
     
     rospy.spin()
